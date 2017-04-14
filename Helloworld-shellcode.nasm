@@ -19,8 +19,10 @@ _start:
     int 0x80 ; calling interpt 
 
     ; exit the programe gracefully 
-    mov eax, 0x1
-    mov ebx, 0x5
+    xor eax, eax
+    mov al, 0x1
+    xor ebx, ebx
+    mov bl, 0x5
     int 0x80
 
 section .data
